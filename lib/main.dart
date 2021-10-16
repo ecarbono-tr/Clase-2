@@ -12,6 +12,7 @@ class Screan extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.green),
       home: Scaffold(
         appBar: AppBar(
+          toolbarHeight: 100,
           title: const Text('Ejercicio'),
         ),
         body: SafeArea(
