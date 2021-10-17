@@ -38,7 +38,11 @@ class ScreanContainer extends StatelessWidget {
             child: Text(
               'Texto ' * 112,
               textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 17, color: Colors.white),
+              style: const TextStyle(
+                  fontSize: 17,
+                  color: Colors.white,
+                  decoration: TextDecoration.underline,
+                  decorationStyle: TextDecorationStyle.dotted),
             ),
             //constraints: BoxConstraints(),
             transform: Matrix4.rotationZ(0.2),
