@@ -8,38 +8,41 @@ class ScreanContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      theme: ThemeData(primarySwatch: Colors.pink),
+      theme: ThemeData(primarySwatch: Colors.green),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Screan 1'),
+          title: const Text('Ejercicio'),
         ),
-        body: Container(
-          width: 300,
-          height: 300,
-          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-          margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-          decoration: BoxDecoration(
-            color: Colors.yellowAccent,
-            border: Border.all(
-                color: const Color.fromARGB(150, 150, 150, 0),
-                width: 2,
-                style: BorderStyle.solid),
-            borderRadius: BorderRadius.circular(16),
-            boxShadow: const [
-              BoxShadow(
-                color: Colors.grey,
-                offset: Offset(6, 6),
-                blurRadius: 2.5,
-              )
-            ],
-            //shape: BoxShape.circle,
+        body: Center(
+          child: Container(
+            width: 300,
+            height: 300,
+            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+            margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+            decoration: BoxDecoration(
+              color: Colors.red,
+              border: Border.all(
+                  color: const Color.fromARGB(255, 255, 255, 0),
+                  width: 2,
+                  style: BorderStyle.solid),
+              borderRadius: BorderRadius.circular(15),
+              boxShadow: const [
+                BoxShadow(
+                  color: Colors.black,
+                  offset: Offset(6, 6),
+                  blurRadius: 2.5,
+                )
+              ],
+              //shape: BoxShape.circle,
+            ),
+            child: Text(
+              'Texto ' * 112,
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontSize: 17, color: Colors.white),
+            ),
+            //constraints: BoxConstraints(),
+            transform: Matrix4.rotationZ(0.2),
           ),
-          child: Text(
-            'Texto ' * 112,
-            textAlign: TextAlign.center,
-          ),
-          //constraints: BoxConstraints(),
-          transform: Matrix4.rotationZ(0.2),
         ),
       ),
     );
