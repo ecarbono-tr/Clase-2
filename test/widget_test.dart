@@ -5,7 +5,7 @@ import 'package:proyecto_1/widgets/widget_text.dart';
 
 void main() {
   testWidgets('Screan Widget Ok', (WidgetTester tester) async {
-    await tester.pumpWidget(const Screan());
+    await tester.pumpWidget(const MyApp());
   });
 
   testWidgets('ScreanContainer Widget Ok', (WidgetTester tester) async {

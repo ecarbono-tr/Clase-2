@@ -8,23 +8,45 @@ class ScreanImg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Material App',
-      theme: ThemeData(primarySwatch: Colors.green),
+      theme: ThemeData(primarySwatch: Colors.cyan),
       home: Scaffold(
         appBar: AppBar(
-          toolbarHeight: 100,
-          title: const Text('Ejercicio'),
+          title: const Text('Ejercicio img'),
         ),
         body: Center(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SizedBox(
-                width: 300,
-                height: 300,
-                child: Image.network(
-                  'https://cdn.pixabay.com/photo/2020/04/03/07/07/comic-speech-bubbles-4997664_960_720.png',
+              const CircleAvatar(
+                child: Text('ES'),
+                backgroundColor: Colors.amber,
+                backgroundImage: NetworkImage(
+                    'https://cdn.pixabay.com/photo/2020/04/03/07/07/comic-speech-bubbles-4997664_960_720.png'),
+              ),
+              Container(
+                width: 200,
+                height: 200,
+                decoration: const BoxDecoration(
+                  color: Colors.cyan,
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                    image: NetworkImage(
+                        'https://cdn.pixabay.com/photo/2020/04/03/07/07/comic-speech-bubbles-4997664_960_720.png'),
+                    fit: BoxFit.scaleDown,
+                    repeat: ImageRepeat.noRepeat,
+                    scale: 6,
+                  ),
+                ),
+                margin: const EdgeInsets.only(left: 16, right: 16),
+              ),
+              Card(
+                elevation: 10,
+                child: Image.asset(
+                  'assets/img/img_1.png',
                   fit: BoxFit.scaleDown,
                   repeat: ImageRepeat.noRepeat,
+                  scale: 8,
                 ),
               ),
             ],
