@@ -2,9 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:proyecto_1/model/movie.dart';
-import 'package:proyecto_1/widgets/widget_container.dart';
-import 'package:proyecto_1/widgets/widget_peliculas.dart';
-import 'package:sliverbar_with_card/sliverbar_with_card.dart';
+import 'package:proyecto_1/widgets/widget_expand_pandel.dart';
 
 void main() => runApp(const MyApp());
 
@@ -32,24 +30,18 @@ class _FisrtScreanState extends State<FisrtScrean> {
   final Movie movie = hercules;
 
   static List<Widget> listaWidget = [
-    const ScreanContainer(),
-    ScreanPeli(movie: hercules),
-    const Text('Text 3'),
+    const MyAppPanel(),
+    const Text('Proximament'),
+    const Text('Descargar'),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: CardSliverAppBar(
-          height: 300,
-          background: Image.asset("assets/img/img_1.png"),
-          title: const Text("The Walking Dead"),
-          card: null,
-          body: Container(
-            margin: const EdgeInsets.symmetric(horizontal: 16),
-            child: Column(
-              children: [listaWidget.elementAt(index)],
-            ),
+        child: Container(
+          margin: const EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            children: [listaWidget.elementAt(index)],
           ),
         ),
       ),
