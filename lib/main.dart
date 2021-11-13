@@ -1,3 +1,5 @@
+// ignore_for_file: import_of_legacy_library_into_null_safe
+
 import 'package:flutter/material.dart';
 import 'package:proyecto_1/model/movie.dart';
 import 'package:proyecto_1/widgets/widget_container.dart';
@@ -41,7 +43,7 @@ class _FisrtScreanState extends State<FisrtScrean> {
         child: CardSliverAppBar(
           height: 300,
           background: Image.asset("assets/img/img_1.png"),
-          title: Text("The Walking Dead"),
+          title: const Text("The Walking Dead"),
           card: null,
           body: Container(
             margin: const EdgeInsets.symmetric(horizontal: 16),

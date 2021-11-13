@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_typing_uninitialized_variables
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -9,8 +11,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        '/': (BuildContext context) => ColorScrean(),
-        '/Second': (BuildContext context) => ColorScrean(),
+        '/': (BuildContext context) => const ColorScrean(),
+        '/Second': (BuildContext context) => const ColorScrean(),
       },
     );
   }
@@ -53,10 +55,11 @@ class ColorEdit extends StatefulWidget {
 }
 
 class _ColorEditState extends State<ColorEdit> {
+  var color;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    final color = ModalRoute.of(context)!.settings.arguments;
+    color = ModalRoute.of(context)!.settings.arguments;
   }
 
   @override

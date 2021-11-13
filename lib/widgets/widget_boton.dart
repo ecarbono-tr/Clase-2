@@ -1,4 +1,4 @@
-// ignore_for_file: constant_identifier_names, must_be_immutable
+// ignore_for_file: constant_identifier_names, must_be_immutable, avoid_print
 
 import 'package:flutter/material.dart';
 import 'package:proyecto_1/model/items.dart';

@@ -9,7 +9,7 @@ class MyAppHero extends StatelessWidget {
     return MaterialApp(
       routes: {
         '/': (BuildContext context) => const FisrtScrean(),
-        '/Second': (BuildContext context) => SecondScrean(),
+        '/Second': (BuildContext context) => const SecondScrean(),
       },
     );
   }
